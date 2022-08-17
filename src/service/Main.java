@@ -26,7 +26,7 @@ public class Main {
             String title = getTitle(file);
             String number = getNumber(file);
 
-            System.out.println("* [" + MODULE.toUpperCase() + "-" + number + title + "]" + " (./" + file.getName() + ")");
+            System.out.println("* [" + MODULE.toUpperCase() + "-" + number + title + "]" + "(./" + file.getName() + ")");
         }
     }
 
