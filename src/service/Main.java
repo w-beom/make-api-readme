@@ -31,12 +31,12 @@ public class Main {
     }
 
     private static String getNumber(File file) {
-        String number = "";
         Matcher matcher = GET_NUMBER.matcher(file.getName());
         if (matcher.find()) {
-            number = matcher.group();
+            return matcher.group();
         }
-        return number;
+
+        return "숫자 없음";
     }
 
     private static String getTitle(File file) throws IOException {
