@@ -1,6 +1,7 @@
 package service;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,6 +19,10 @@ public class Main {
         File directory = new File(DATA_DIRECTORY);
 
         File[] files = directory.listFiles();
+
+        if (files == null || files.length == 0) {
+            throw new FileNotFoundException("파일목록을 찾을 수 없습니다.");
+        }
 
         for (File file : files) {
             if (!file.getName().contains(MODULE)) {
